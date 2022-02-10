@@ -78,6 +78,11 @@
                 <option value="wisma">Wisma</option>
                 <option value="hotel">Hotel</option>
             </select>
+            <select id="harga" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option value="duaratus">0 - 200.000</option>
+                <option value="empatratus">200.000 - 400.000</option>
+                <option value="selebihnya">> 400.000 </option>
+            </select>
             <div id="map" class="map"></div>
             <!-- fitur pop up -->
             <div class="ol-popup" id="popup">
@@ -129,6 +134,7 @@
             })
         });
         const rating = document.getElementById("rating_penginapan");
+        const harga = document.getElementById("harga");
         // End variabel yang ditampilkan
 
         // Membuat variabel Layer Riau
@@ -165,30 +171,76 @@
                     if (kategori.value == "hotel" && feature.get('Jenis Penginapan') == "Hotel") {
                         if (rating.value == "3" && feature.get('Rating') == "3.3" || rating.value == "3" && feature.get("Rating") == "3.4" || rating.value == "3" && feature.get("Rating") == "3.5" || rating.value == "3" && feature.get("Rating") == "3.6" ||
                             rating.value == "3" && feature.get("Rating") == "3.7" || rating.value == "3" && feature.get("Rating") == "3.8" || rating.value == "3" && feature.get("Rating") == "3.9") {
-                            return styleFeature;
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         } else if (rating.value == "40-45" && feature.get('Rating') == "4.0" || rating.value == "40-45" && feature.get("Rating") == "4.1" ||
                             rating.value == "40-45" && feature.get("Rating") == "4.2" || rating.value == "40-45" && feature.get("Rating") == "4.4" || rating.value == "40-45" && feature.get("Rating") == "4.5") {
-                            return styleFeature;
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         } else if (rating.value == "46-50" && feature.get('Rating') == "4.6" || rating.value == "46-50" && feature.get("Rating") == "4.7" ||
                             rating.value == "46-50" && feature.get("Rating") == "4.8" || rating.value == "46-50" && feature.get("Rating") == "4.9" || rating.value == "46-50" && feature.get("Rating") == "5.0") {
-                            return styleFeature;
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         } else if (rating.value == "all") {
-                            return styleFeature;
-
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         }
                     } else if (kategori.value == "wisma" && feature.get('Jenis Penginapan') == "Wisma") {
                         if (rating.value == "3" && feature.get('Rating') == "3.3" || rating.value == "3" && feature.get("Rating") == "3.4" || rating.value == "3" && feature.get("Rating") == "3.5" || rating.value == "3" && feature.get("Rating") == "3.6" ||
                             rating.value == "3" && feature.get("Rating") == "3.7" || rating.value == "3" && feature.get("Rating") == "3.8" || rating.value == "3" && feature.get("Rating") == "3.9") {
-                            return styleFeature;
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         } else if (rating.value == "40-45" && feature.get('Rating') == "4.0" || rating.value == "40-45" && feature.get("Rating") == "4.1" ||
                             rating.value == "40-45" && feature.get("Rating") == "4.2" || rating.value == "40-45" && feature.get("Rating") == "4.4" || rating.value == "40-45" && feature.get("Rating") == "4.5") {
-                            return styleFeature;
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         } else if (rating.value == "46-50" && feature.get('Rating') == "4.6" || rating.value == "46-50" && feature.get("Rating") == "4.7" ||
                             rating.value == "46-50" && feature.get("Rating") == "4.8" || rating.value == "46-50" && feature.get("Rating") == "4.9" || rating.value == "46-50" && feature.get("Rating") == "5.0") {
-                            return styleFeature;
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         } else if (rating.value == "all") {
-                            return styleFeature;
-
+                            if (harga.value == "duaratus" && feature.get("Harga sewa") <= 200000) {
+                                return styleFeature;
+                            } else if (harga.value == "empatratus" && feature.get("Harga sewa") >= 200000 && feature.get("Harga sewa") <= 400000) {
+                                return styleFeature;
+                            } else if (harga.value == "selebihnya" && feature.get("Harga sewa") >= 400000) {
+                                return styleFeature;
+                            }
                         }
                     }
                 }
@@ -196,7 +248,6 @@
             map.addLayer(newLayer);
             newLayer.set('name', 'newLayer');
         }
-
         let styleFeature = new ol.style.Style({
             image: new ol.style.Icon({
                 anchor: [0.5, 46],
@@ -210,6 +261,9 @@
             filterData2();
         });
         kategori.addEventListener("change", function() {
+            filterData2();
+        })
+        harga.addEventListener("change", function() {
             filterData2();
         })
     </script>
