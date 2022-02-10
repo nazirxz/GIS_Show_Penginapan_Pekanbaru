@@ -1,6 +1,4 @@
-Thanks for downloading this template!
+Menampilkan tempat penginapan yang ada dipekanbaru dengan menggunakan data JSON
 
-Template Name: Appland
-Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+
+#SwaynZ
